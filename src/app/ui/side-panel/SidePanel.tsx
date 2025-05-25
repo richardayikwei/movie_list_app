@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { inter } from "../fonts";
 import { newfeed } from "@/app/lib/data";
-import genres from '@/app/lib/placeholder-data-genre.json'
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
+import genres from "@/app/lib/placeholder-data-genre.json";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 
 
@@ -58,7 +58,11 @@ function SidePanel() {
           type="button"
           className="mt-[1.4375rem] dark:hover:text-slate-400 hover:text-white flex items-center text-xs "
         >
-          View more<span><ChevronRightIcon className="h-[0.75rem] w-[1.333125rem]" /></span>
+          View more
+          <span>
+            <ChevronRightIcon className="h-[0.75rem] w-[1.333125rem]" />
+          </span>
+
         </button>
       </section>
     </aside>

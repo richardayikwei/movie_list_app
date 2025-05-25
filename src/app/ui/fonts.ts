@@ -1,4 +1,6 @@
-import { Poppins,Inter } from "next/font/google";
+
+import { Poppins, Inter } from "next/font/google";
+
 
 
 export const poppins = Poppins({
