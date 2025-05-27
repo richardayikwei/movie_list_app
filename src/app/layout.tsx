@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}  antialiased flex flex-row`}>
+      <body className={`${poppins.variable}  antialiased flex flex-col md:flex-row`}>
         <SidePanel />
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
       </body>
     </html>
   );

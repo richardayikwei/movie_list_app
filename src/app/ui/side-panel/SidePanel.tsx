@@ -1,18 +1,13 @@
 import Image from "next/image";
 import { inter } from "../fonts";
 import { newfeed } from "@/app/lib/data";
-
 import genres from "@/app/lib/placeholder-data-genre.json";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-
-
-
-
 function SidePanel() {
   return (
-    <aside className="w-[14.3125rem] flex-col  bg-[var(--side-panel)]">
-      <h2 className="ml-8 mt-7 text-xl">
+    <aside className="w-[14.3125rem] bg-[var(--side-panel)] min-h-screen pb-3">
+      <h2 className="ml-8 mt-9 text-xl">
         DXX.<span className="text-[#FF0000]">MOVIES</span>
       </h2>
       <section className="w-[7.3125rem] h-[9.4375rem] mt-[7.375rem]">
@@ -27,12 +22,7 @@ function SidePanel() {
                 className="flex items-center dark:hover:text-slate-400 hover:text-white"
                 key={feed.title}
               >
-                <Image
-                  src={feed.image}
-                  width={feed.dim}
-                  height={feed.dim}
-                  alt={feed.title}
-                />
+                <feed.icon width={feed.dim} height={feed.dim} />
                 <span className="ml-[0.8125rem]">{feed.title}</span>
               </a>
             );
@@ -62,7 +52,6 @@ function SidePanel() {
           <span>
             <ChevronRightIcon className="h-[0.75rem] w-[1.333125rem]" />
           </span>
-
         </button>
       </section>
     </aside>
